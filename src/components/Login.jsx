@@ -1,22 +1,12 @@
-import React, { useState } from 'react'
-import { Navigate } from 'react-router-dom';
+import React from 'react'
 
 
 const Login = () => {
 
-  const [state, setState] = useState(false);
-
-  const handleOnclick = () =>{
-    setTimeout(()=>{
-      setState(true)
-    },2000)
-  }
-
   return (
     <div>
-      {state? <Navigate to={'/home'}/>:
-        <button onClick={handleOnclick}>Click at home</button>
-      }
+      <span>Click para ir al home</span>
+      <button>Login</button>
     </div>
   )
 }
